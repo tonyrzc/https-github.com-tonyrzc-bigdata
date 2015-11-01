@@ -1,0 +1,30 @@
+```{r}
+setwd('/Users/zhichao/Documents/bigdata')
+
+mydata<-read.csv("Ozone_data.csv")
+
+names(mydata)
+
+mydata[c(1,2),]
+
+nrow(mydata)
+
+mydata[c(152,153),]
+
+mydata[47,]
+
+sum(is.na(mydata$Ozone))
+
+propmiss <- function(dataframe) lapply(dataframe,function(x) data.frame(nmiss=sum(is.na(x)), n=length(x), propmiss=sum(is.na(x))/length(x)))
+propmiss(mydata)
+
+mean(mydata$Ozone,na.rm=TRUE)
+
+sum(mydata$Ozone,na.rm=TRUE)/sum(!is.na(mydata$Ozone))
+
+mean(mydata$Solar.R [mydata$Ozone>31 & mydata$Temp>90], na.rm=TRUE)
+
+mean(mydata$Temp [mydata$Month==6], na.rm=TRUE)
+
+max(mydata$Ozone [mydata$Month==5], na.rm=TRUE)
+```
