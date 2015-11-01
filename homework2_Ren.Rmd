@@ -1,0 +1,11 @@
+---
+output: html_document
+---
+##Example
+### - Regression knit example
+```{r}
+setwd('/Users/zhichao/Documents/bigdata')
+mydata<-read.csv("Ozone_data.csv")
+summary(lm(Ozone ~ Temp+Month, data = mydata))
+```
+
